@@ -1,0 +1,3 @@
+class Bulldozer < Mechanism
+
+end

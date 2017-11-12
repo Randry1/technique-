@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mechanisms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Region</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mechanisms.each do |mechanism| %>
+      <tr>
+        <td><%= mechanism.name %></td>
+        <td><%= mechanism.rating %></td>
+        <td><%= mechanism.image %></td>
+        <td><%= mechanism.price %></td>
+        <td><%= mechanism.Region %></td>
+        <td><%= mechanism.type %></td>
+        <td><%= link_to 'Show', region_mechanism_path(mechanism.Region, mechanism.id) %></td>
+        <td><%= link_to 'Edit', edit_region_mechanism_path(mechanism.Region, mechanism.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mechanism', new_region_mechanism_path %>

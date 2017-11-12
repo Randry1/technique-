@@ -1,0 +1,43 @@
+
+<%= form_for( @mechanism.Region, @mechanism ) do |f| %>
+  <% if @mechanism.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mechanism.errors.count, "error") %> prohibited this mechanism from being saved:</h2>
+
+      <ul>
+      <% @mechanism.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Region_id %>
+    <%= f.text_field :Region_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

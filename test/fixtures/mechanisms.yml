@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rating: 1
+  image: MyString
+  price: 1
+  Region: one
+
+two:
+  name: MyString
+  rating: 1
+  image: MyString
+  price: 1
+  Region: two

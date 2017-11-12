@@ -1,0 +1,3 @@
+class Excavator < Mechanism
+
+end

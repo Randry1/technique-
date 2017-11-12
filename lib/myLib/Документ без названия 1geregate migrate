@@ -1,0 +1,2 @@
+technique
+rails g scaffold Comment post:references

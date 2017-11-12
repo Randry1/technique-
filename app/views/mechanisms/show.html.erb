@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id</strong>
+  <%= @mechanism.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @mechanism.name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @mechanism.rating %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @mechanism.image %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @mechanism.price %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @mechanism.Region %>
+</p>
+
+<%= link_to 'Edit', edit_region_mechanism_path([@region, @mechanism]) %> |
+<%= link_to 'Back', region_mechanisms_path %>
