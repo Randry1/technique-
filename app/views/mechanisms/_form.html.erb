@@ -1,5 +1,5 @@
 
-<%= form_for( @mechanism.Region, @mechanism ) do |f| %>
+<%= form_for(  @mechanism,  url: {action: "create"}  ) do |f| %>
   <% if @mechanism.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@mechanism.errors.count, "error") %> prohibited this mechanism from being saved:</h2>
@@ -31,6 +31,15 @@
     <%= f.label :price %>
     <%= f.number_field :price %>
   </div>
+
+    <div class="field">
+      <%= f.label :type %>
+      <%= f.select(:type) do %>
+          <% [['Excavator', 'Excavator'], ['Bulldozer', 'Bulldozer']].each do |c| -%>
+              <%= content_tag(:option, c.first, value: c.last) %>
+          <% end %>
+      <% end %>
+    </div>
 
   <div class="field">
     <%= f.label :Region_id %>

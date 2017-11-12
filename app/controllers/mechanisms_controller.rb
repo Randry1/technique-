@@ -30,8 +30,8 @@ class MechanismsController < ApplicationController
 
     respond_to do |format|
       if @mechanism.save
-        format.html { redirect_to [@region, @mechanism], notice: 'Mechanism was successfully created.' }
-        format.json { render :show, status: :created, location: [@region, @mechanism] }
+        format.html { redirect_to region_mechanism_path(@mechanism.Region, @mechanism.id), notice: 'Mechanism was successfully created.' }
+        format.json { render :show, status: :created, location:  @mechanism }
       else
         format.html { render :new }
         format.json { render json: @mechanism.errors, status: :unprocessable_entity }
@@ -72,6 +72,6 @@ class MechanismsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mechanism_params
-      params.require(:mechanism).permit(:name, :rating, :image, :price, :Region_id)
+      params.require(:mechanism).permit(:name, :rating, :image, :price, :Region_id, :type)
     end
 end
