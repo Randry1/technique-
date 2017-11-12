@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
 
-* System dependencies
+* System dependencies linux Lubuntu 14
 
 * Configuration
 
-* Database creation
+* Database creation Sqlite3
 
 * Database initialization
 
