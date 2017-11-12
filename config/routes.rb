@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root to: "/regions/42/mechanisms"
+  # root to: "regions#show"
   resources :regions do
     resources :mechanisms
   end

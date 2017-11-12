@@ -35,15 +35,15 @@
     <div class="field">
       <%= f.label :type %>
       <%= f.select(:type) do %>
-          <% [['Excavator', 'Excavator'], ['Bulldozer', 'Bulldozer']].each do |c| -%>
+          <!--TODO найти как можно извлечь дочернии классы-->
+          <% [['Экскаватор', 'Excavator'], ['Бульдозер', 'Bulldozer'],['Эвакуатор', 'Evacuator']].each do |c| -%>
               <%= content_tag(:option, c.first, value: c.last) %>
           <% end %>
       <% end %>
     </div>
 
   <div class="field">
-    <%= f.label :Region_id %>
-    <%= f.text_field :Region_id %>
+    <%= f.hidden_field :Region_id, value: @region.id %>
   </div>
 
   <div class="actions">

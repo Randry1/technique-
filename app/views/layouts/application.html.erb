@@ -52,6 +52,7 @@
             <%= message %>
           </div>
       <% end %>
+      <p id="my_notice"><%=  @note if !@note.nil? %></p>
 
       <%= yield %>
     </div>

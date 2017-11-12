@@ -5,6 +5,8 @@ class MechanismsController < ApplicationController
   # GET /mechanisms.json
   def index
     @mechanisms = Mechanism.all
+    e = Excavator.new
+    @note = Mechanism.descendants
   end
 
   # GET /mechanisms/1
@@ -16,6 +18,9 @@ class MechanismsController < ApplicationController
   def new
     @region = Region.find(params[:region_id])
     @mechanism = Mechanism.new
+    e = Mechanism.new
+    @typeMechanism = Mechanism.subclasses
+    @note = @typeMechanism
   end
 
   # GET /mechanisms/1/edit
@@ -68,6 +73,8 @@ class MechanismsController < ApplicationController
     def set_mechanism
       @region = Region.find(params[:region_id])
       @mechanism = Mechanism.find(params[:id])
+      e = Excavator.new
+      @typeMechanism = ObjectSpace.each_object(Class).to_a
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

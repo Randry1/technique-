@@ -1,0 +1,2 @@
+class Evacuator < Mechanism
+end
