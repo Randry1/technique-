@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root to: "regions#show"
+  root to: "regions#index"
   resources :regions do
     resources :mechanisms
   end
